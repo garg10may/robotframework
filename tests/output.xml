@@ -1,27 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230220 18:14:45.820" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230220 19:03:43.453" rpa="false" schemaversion="3">
 <suite id="s1" name="testDemo1" source="C:\Users\tanmay.garg\coding\robot\tests\testDemo1.robot">
-<test id="s1-t1" name="Validate UnSuccessful Login" line="8">
-<kw name="Open Browser">
+<test id="s1-t1" name="Validate UnSuccessful Login" line="7">
+<kw name="Open browser">
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <arg>Chrome</arg>
 <arg>executable_path=C:/Users/tanmay.garg/coding/robot/chromedriver.exe</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20230220 18:14:45.982" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20230220 18:14:45.982" endtime="20230220 18:14:47.743"/>
+<msg timestamp="20230220 19:03:43.590" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230220 19:03:43.589" endtime="20230220 19:03:44.768"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://practicetestautomation.com/practice-test-login/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230220 18:14:47.744" level="INFO">Opening url 'https://practicetestautomation.com/practice-test-login/'</msg>
-<status status="PASS" starttime="20230220 18:14:47.743" endtime="20230220 18:14:52.256"/>
+<msg timestamp="20230220 19:03:44.768" level="INFO">Opening url 'https://practicetestautomation.com/practice-test-login/'</msg>
+<status status="PASS" starttime="20230220 19:03:44.768" endtime="20230220 19:03:49.186"/>
 </kw>
-<status status="PASS" starttime="20230220 18:14:45.982" endtime="20230220 18:14:52.256"/>
+<status status="PASS" starttime="20230220 19:03:43.589" endtime="20230220 19:03:49.186"/>
 </kw>
-<status status="PASS" starttime="20230220 18:14:45.974" endtime="20230220 18:14:52.256"/>
+<kw name="Fill the login form">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230220 19:03:49.187" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20230220 19:03:49.187" endtime="20230220 19:03:49.248"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>Password123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230220 19:03:49.249" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230220 19:03:49.277" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230220 19:03:49.307" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230220 19:03:49.249" endtime="20230220 19:03:49.307"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230220 19:03:49.307" level="INFO">Clicking button 'id:submit'.</msg>
+<status status="PASS" starttime="20230220 19:03:49.307" endtime="20230220 19:03:55.886"/>
+</kw>
+<status status="PASS" starttime="20230220 19:03:49.186" endtime="20230220 19:03:55.886"/>
+</kw>
+<kw name="Wait until the logout button is visible">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:.wp-block-button__link</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230220 19:03:55.887" endtime="20230220 19:03:55.905"/>
+</kw>
+<status status="PASS" starttime="20230220 19:03:55.886" endtime="20230220 19:03:55.906"/>
+</kw>
+<kw name="Verify the text on button in log out">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${result}</var>
+<arg>css:.wp-block-button__link</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230220 19:03:55.921" level="INFO">${result} = Log out</msg>
+<status status="PASS" starttime="20230220 19:03:55.906" endtime="20230220 19:03:55.921"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${result}</arg>
+<arg>Log out</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230220 19:03:55.921" endtime="20230220 19:03:55.922"/>
+</kw>
+<status status="PASS" starttime="20230220 19:03:55.906" endtime="20230220 19:03:55.922"/>
+</kw>
+<status status="PASS" starttime="20230220 19:03:43.589" endtime="20230220 19:03:55.922"/>
 </test>
 <doc>To validate the Login form</doc>
-<status status="PASS" starttime="20230220 18:14:45.820" endtime="20230220 18:14:52.260"/>
+<status status="PASS" starttime="20230220 19:03:43.454" endtime="20230220 19:03:55.923"/>
 </suite>
 <statistics>
 <total>
