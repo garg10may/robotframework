@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230220 18:14:45.820" rpa="false" schemaversion="3">
+<suite id="s1" name="testDemo1" source="C:\Users\tanmay.garg\coding\robot\tests\testDemo1.robot">
+<test id="s1-t1" name="Validate UnSuccessful Login" line="8">
+<kw name="Open Browser">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=C:/Users/tanmay.garg/coding/robot/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230220 18:14:45.982" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230220 18:14:45.982" endtime="20230220 18:14:47.743"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://practicetestautomation.com/practice-test-login/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230220 18:14:47.744" level="INFO">Opening url 'https://practicetestautomation.com/practice-test-login/'</msg>
+<status status="PASS" starttime="20230220 18:14:47.743" endtime="20230220 18:14:52.256"/>
+</kw>
+<status status="PASS" starttime="20230220 18:14:45.982" endtime="20230220 18:14:52.256"/>
+</kw>
+<status status="PASS" starttime="20230220 18:14:45.974" endtime="20230220 18:14:52.256"/>
+</test>
+<doc>To validate the Login form</doc>
+<status status="PASS" starttime="20230220 18:14:45.820" endtime="20230220 18:14:52.260"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="testDemo1">testDemo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
