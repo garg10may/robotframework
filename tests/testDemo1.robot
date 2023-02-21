@@ -2,6 +2,7 @@
 Documentation       To validate the Login form
 
 Library             SeleniumLibrary
+Library             ../customLibraries/Example.py
 Resource            resource.robot
 
 Test Setup          Open browser
@@ -20,9 +21,10 @@ Validate Successful Login
 
 *** Keywords ***
 Fill the login form
-    Input Text    id:usernime    ${username}
+    Input Text    id:username    ${username}
     Input Password    id:password    ${password}
     Click Button    id:submit
+    Hello World
 
 Wait until the logout button is visible
     Wait Until Element Is Visible    css:.wp-block-button__link
