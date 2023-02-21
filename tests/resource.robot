@@ -5,8 +5,9 @@ Library             SeleniumLibrary
 
 
 *** Variables ***
-${username}    student
-${password}    Password123
+${username}     student
+${password}     Password123
+
 
 *** Keywords ***
 Open browser

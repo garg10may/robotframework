@@ -6,7 +6,7 @@ Library             SeleniumLibrary
 ${logoutButtonText}    Log out
 
 *** Test Cases ***
-Validate UnSuccessful Login
+Validate Successful Login
     Open browser
     Fill the login form
     Wait until the logout button is visible

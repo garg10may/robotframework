@@ -20,7 +20,7 @@ Validate Successful Login
 
 *** Keywords ***
 Fill the login form
-    Input Text    id:username    ${username}
+    Input Text    id:usernime    ${username}
     Input Password    id:password    ${password}
     Click Button    id:submit
 
