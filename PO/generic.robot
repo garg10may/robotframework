@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Resources
+Documentation       Resources, we are storing common variables to be used and Open browser since it would be needed everywhere
 
 Library             SeleniumLibrary
 

@@ -1,80 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230221 10:37:35.417" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230222 07:58:47.977" rpa="false" schemaversion="3">
 <suite id="s1" name="testDemo1" source="C:\Users\tanmay.garg\coding\robot\tests\testDemo1.robot">
 <test id="s1-t1" name="Validate Successful Login" line="16">
-<kw name="Open browser" library="resource" type="SETUP">
+<kw name="Open browser" library="generic" type="SETUP">
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <arg>Chrome</arg>
 <arg>executable_path=C:/Users/tanmay.garg/coding/robot/chromedriver.exe</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20230221 10:37:35.557" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20230221 10:37:35.557" endtime="20230221 10:37:36.718"/>
+<msg timestamp="20230222 07:58:48.133" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230222 07:58:48.132" endtime="20230222 07:58:49.243"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://practicetestautomation.com/practice-test-login/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230221 10:37:36.718" level="INFO">Opening url 'https://practicetestautomation.com/practice-test-login/'</msg>
-<status status="PASS" starttime="20230221 10:37:36.718" endtime="20230221 10:37:39.558"/>
+<msg timestamp="20230222 07:58:49.243" level="INFO">Opening url 'https://practicetestautomation.com/practice-test-login/'</msg>
+<status status="PASS" starttime="20230222 07:58:49.243" endtime="20230222 07:58:55.955"/>
 </kw>
-<status status="PASS" starttime="20230221 10:37:35.557" endtime="20230221 10:37:39.558"/>
+<status status="PASS" starttime="20230222 07:58:48.132" endtime="20230222 07:58:55.956"/>
 </kw>
-<kw name="Fill the login form">
+<kw name="Fill the login form" library="LoginPage">
+<arg>${user_name}</arg>
+<arg>${password}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:username</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230221 10:37:39.560" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
-<status status="PASS" starttime="20230221 10:37:39.559" endtime="20230221 10:37:39.631"/>
+<msg timestamp="20230222 07:58:55.957" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20230222 07:58:55.957" endtime="20230222 07:58:56.028"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id:password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230221 10:37:39.631" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg timestamp="20230221 10:37:39.666" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230221 10:37:39.695" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230221 10:37:39.631" endtime="20230221 10:37:39.695"/>
+<msg timestamp="20230222 07:58:56.029" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230222 07:58:56.062" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230222 07:58:56.094" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230222 07:58:56.028" endtime="20230222 07:58:56.094"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:submit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230221 10:37:39.696" level="INFO">Clicking button 'id:submit'.</msg>
-<status status="PASS" starttime="20230221 10:37:39.695" endtime="20230221 10:37:41.165"/>
+<msg timestamp="20230222 07:58:56.094" level="INFO">Clicking button 'id:submit'.</msg>
+<status status="PASS" starttime="20230222 07:58:56.094" endtime="20230222 07:58:58.225"/>
 </kw>
 <kw name="Hello World" library="Example">
-<msg timestamp="20230221 10:37:41.165" level="INFO">Hello world</msg>
-<status status="PASS" starttime="20230221 10:37:41.165" endtime="20230221 10:37:41.165"/>
+<msg timestamp="20230222 07:58:58.226" level="INFO">Hello world</msg>
+<status status="PASS" starttime="20230222 07:58:58.225" endtime="20230222 07:58:58.226"/>
 </kw>
-<status status="PASS" starttime="20230221 10:37:39.559" endtime="20230221 10:37:41.165"/>
+<status status="PASS" starttime="20230222 07:58:55.956" endtime="20230222 07:58:58.226"/>
 </kw>
 <kw name="Wait until the logout button is visible">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:.wp-block-button__link</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230221 10:37:41.166" endtime="20230221 10:37:41.189"/>
+<status status="PASS" starttime="20230222 07:58:58.227" endtime="20230222 07:58:58.249"/>
 </kw>
-<status status="PASS" starttime="20230221 10:37:41.166" endtime="20230221 10:37:41.189"/>
+<status status="PASS" starttime="20230222 07:58:58.226" endtime="20230222 07:58:58.249"/>
 </kw>
 <kw name="Verify the text on button in log out">
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${result}</var>
 <arg>css:.wp-block-button__link</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230221 10:37:41.208" level="INFO">${result} = Log out</msg>
-<status status="PASS" starttime="20230221 10:37:41.190" endtime="20230221 10:37:41.208"/>
+<msg timestamp="20230222 07:58:58.269" level="INFO">${result} = Log out</msg>
+<status status="PASS" starttime="20230222 07:58:58.250" endtime="20230222 07:58:58.269"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${result}</arg>
 <arg>${logoutButtonText}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20230221 10:37:41.208" endtime="20230221 10:37:41.209"/>
+<status status="PASS" starttime="20230222 07:58:58.269" endtime="20230222 07:58:58.269"/>
 </kw>
-<status status="PASS" starttime="20230221 10:37:41.190" endtime="20230221 10:37:41.209"/>
+<status status="PASS" starttime="20230222 07:58:58.250" endtime="20230222 07:58:58.269"/>
 </kw>
-<status status="PASS" starttime="20230221 10:37:35.557" endtime="20230221 10:37:41.209"/>
+<status status="PASS" starttime="20230222 07:58:48.131" endtime="20230222 07:58:58.270"/>
 </test>
 <doc>To validate the Login form</doc>
-<status status="PASS" starttime="20230221 10:37:35.418" endtime="20230221 10:37:41.211"/>
+<status status="PASS" starttime="20230222 07:58:47.978" endtime="20230222 07:58:58.273"/>
 </suite>
 <statistics>
 <total>
